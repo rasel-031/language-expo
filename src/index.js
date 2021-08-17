@@ -1,17 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import Navbar from "./Component/Navbar";
+import MainBody from "./Component/Main";
+import LangDiv from "./Component/Lang";
+import BlogDiv from "./Component/Blog";
+import AboutDiv from "./Component/About";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+ReactDOM.render(<Navbar /> , document.getElementById("topnav"));
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+ReactDOM.render(<MainBody />, document.getElementById("main"));
+
+ReactDOM.render(<LangDiv />, document.getElementById("language-div"));
+
+ReactDOM.render(<BlogDiv />, document.getElementById("blog-div"));
+
+ReactDOM.render(<AboutDiv />, document.getElementById("about-us"));
